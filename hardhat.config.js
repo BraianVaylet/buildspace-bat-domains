@@ -1,4 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
+
+const projectId = process.env.ALCHEMY_PROJECT_ID_RINKEBY;
+const privateKey = process.env.DEPLOYER_SIGNER_PRIVATE_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -18,4 +22,10 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.10",
+  networks: {
+    mumbai: {
+      url: `https://polygon-mumbai.g.alchemy.com/v2/${projectId}`,
+      accounts: [privateKey],
+    }
+  }
 };

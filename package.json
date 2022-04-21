@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "runjs": "npx hardhat run scripts/run.js"
+    "runjs": "npx hardhat run scripts/run.js",
+    "deployjs": "npx hardhat run scripts/deploy.js --network mumbai"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "hardhat": "^2.9.3"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.5.0"
+    "@openzeppelin/contracts": "^4.5.0",
+    "dotenv": "^14.2.0"
   }
 }
