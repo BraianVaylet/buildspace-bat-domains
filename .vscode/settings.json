@@ -1,5 +1,10 @@
 {
   "cSpell.words": [
     "katana"
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+  
+  },
+  "solidity.packageDefaultDependenciesContractsDirectory": "contracts",
+  "solidity.packageDefaultDependenciesDirectory": "node_modules",
 }
